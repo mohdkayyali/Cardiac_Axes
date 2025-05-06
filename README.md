@@ -1,6 +1,6 @@
 # Cardiac_Axes
 
-This repository contains Python code for analysing cardiac anatomical and electrical axes. It focuses on extracting axes based on multiple definitions and converting vectors into polar coordinates. The repository is organised into distinct modules, each serving a specific purpose.
+This repository contains Python & MATLAB code for computing and analysing cardiac anatomical and electrical axes. It focuses on extracting axes based on multiple definitions and converting vectors into 3D/2D angles and spherical coordinates. The repository is organised into distinct modules as seen below.
 
 ## Directory Structure
 
