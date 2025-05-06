@@ -5,27 +5,30 @@ This repository contains Python code for analysing cardiac anatomical and electr
 ## Directory Structure
 
 - **Anatomical_axis/**  
-  Contains code to extract anatomical axes based on five different definitions. These calculations are performed using surface meshes of cardiac structures.
+  Contains code to extract anatomical axes based on five different definitions. These calculations are performed using surface meshes with labelled cardiac structures.
 
 - **Electrical_axis/**  
-  Includes code to process electrocardiogram (ECG) signals, convert them into vectorcardiograms (VCG), and extract various ECG parameters. The module also provides methods to determine electrical axes using four different definitions.
+  Includes code to process read ECG signals from xml files, convert them into vectorcardiograms (VCG), and extract various ECG parameters from the xml file. The file also provides functions to compute electrical axes using different definitions.
 
-- **polar_coordinates_calc.py**  
-  Implements functionality to calculate polar coordinates from vector data.
+- **Processing_axes**  
+  Scripts to extract anato-electrical angular separation in 3D as well as anatomical and electrical axis orientation metrics in 2D and in the spherical coordinate system. 
 
-- **polar_coordinates_load.py**  
-  A helper script for loading and pre-processing vector data before converting to polar coordinates.
+- **axis_separation_metrics**  
+  MATLAB scripts for computing the error metrics used to identify the optimal cardiac axes definitions. 
 
 ## Features
 
 1. **Anatomical Axis Extraction**  
-   - Processes 3D surface meshes to determine anatomical axes.  
-   - Supports five predefined methods for axis determination.  
+   - Processes 3D surface meshes to determine anatomical axes -- from vtk files.  
+   - Supports five predefined methods for axis determination.
+   - Computes spherecity index of the left ventricle. 
 
-2. **Electrical Axis Analysis**  
-   - Converts standard ECG signals to VCG representations.  
-   - Extracts critical ECG parameters.  
+2. **Electrical Axis Analysis**
+   - Extracts ECG signals and parameters from the xml files.  
+   - Converts standard ECG signals to VCG.   
    - Computes electrical axes using  distinct definitions.  
 
-3. **Polar Coordinate Conversion**  
-   - Transforms 3D vector data into polar coordinates for further analysis.
+3. **Processing_axes**  
+   - Transforms 3D vector data into spherical coordinates for further analysis.
+   - Computes 3D angular sepration between anatomical & electrical axes
+   - Computes 2D, planar angles for individual axes.
